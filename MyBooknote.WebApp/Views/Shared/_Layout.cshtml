@@ -1,0 +1,162 @@
+﻿@using MyBooknote.Entities
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Book Notes</title>
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- Icons   -->
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="~/Content/shop-homepage.css" rel="stylesheet" />
+</head>
+<body>
+
+    @{
+        BooknoteUser user = null;
+
+        if (Session["login"] != null)
+        {
+            user = Session["login"] as BooknoteUser;
+        }
+    }
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/Home/Index">My Booknote</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                    </li>
+                    @if (user != null)
+                    {
+                        @*<li class="nav-item">
+                                <a class="nav-link" href="#"><span class="fa fa-wrench"></span> Yönetim</a>
+                            </li>*@
+                        <div class="dropdown">
+                            <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link" href="#"><span class="fa fa-wrench"></span> Yönetim</a>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="/Notes/Create"><span class="fa fa-plus"></span> Not Ekle</a>
+                                <a class="dropdown-item" href="/Notes/Index"><span class="fa fa-list"></span> Notlarım</a>
+                                <a class="dropdown-item" href="/Notes/MyLikedNotes"><span class="fa fa-heart-o"></span> Beğendiklerim</a>
+                                @if (user.IsAdmin)
+                                {
+                                    <a class="dropdown-item" href="/Category/Create"><span class="fa fa-plus"></span> Kategori Ekle</a>
+                                    <a class="dropdown-item" href="/Category/Index"><span class="fa fa-list"></span> Kategoriler</a>
+                                    <a class="dropdown-item" href="/BooknoteUser/Create"><span class="fa fa-plus"></span> Kullanıcı Ekle</a>
+                                    <a class="dropdown-item" href="/BooknoteUser/Index"><span class="fa fa-list"></span> Kullanıcılar</a>
+                                }
+                            </div>
+                        </div>
+                    }
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/MostLiked"><span class="fa fa-star"></span> En Beğenilenler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Index"><span class="fa fa-list"></span> Son Yazılanlar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/About"><span class="fa fa-info-circle"></span> Hakkımızda</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-sm-auto">
+                    @if (user == null)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Login"><span class="fa fa-sign-in"></span> Giriş</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Register"><span class="fa fa-user-plus"></span> Üye ol</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/ShowProfile"><span class="fa fa-user"></span> @user.Username</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Logout"><span class="fa fa-sign-out"></span> Çıkış</a>
+                        </li>
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    @RenderBody()
+    <!-- /.container -->
+    <!-- Footer -->
+    @*<footer class="py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; My Booknotes @DateTime.Now.Year</p>
+            </div>
+        </footer>*@
+    <footer>
+        <div class="container">
+            <hr>
+            <footer class="small">
+                <div class="row">
+                    <div class="col-lg-4 text-left">
+                        <h5>
+                            <strong>Site Haritası</strong>
+                        </h5>
+                        <hr />
+                        <p class="text-left">
+                            <a href="/Home/About"><i class="fa fa-info-circle mr-2"></i>Hakkmızda</a><br />
+                            <a href="/Home/MostLiked"><i class="fa fa-star mr-2"></i>En Beğenilenler</a><br />
+                            <a href="/Home/Index"><i class="fa fa-th-list mr-2"></i>Son Yazılar</a><br />
+                            <a href="/Home/Login"><i class="fa fa-sign-in mr-2"></i>Giriş</a><br />
+                            <a href="/Home/Register"><i class="fa fa-user mr-2"></i>Üye Ol</a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 text-center">
+                        <h5>
+                            <strong>My Evernote</strong>
+                        </h5>
+                        <hr />
+                        <p>
+                            Tüm hakları saklıdır &copy;<br />
+                            My Booknote<br />@DateTime.Now.Year
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 text-right">
+                        <h5>
+                            <strong>E-Bülten Üyeliği</strong>
+                        </h5>
+                        <hr />
+                        <div class="col-md-12 text-right pr-0">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="e-posta adresiniz">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="submit">
+                                        <span class="fa fa-send"></span> Gönder
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Scripts/jquery-3.5.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+</body>
+</html>

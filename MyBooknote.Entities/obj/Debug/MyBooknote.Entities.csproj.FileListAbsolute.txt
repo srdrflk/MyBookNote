@@ -1,0 +1,12 @@
+C:\Users\Serdar\source\repos\MyBooknote\MyBooknote.Entities\bin\Debug\MyBooknote.Entities.dll
+C:\Users\Serdar\source\repos\MyBooknote\MyBooknote.Entities\bin\Debug\MyBooknote.Entities.pdb
+C:\Users\Serdar\source\repos\MyBooknote\MyBooknote.Entities\obj\Debug\MyBooknote.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Serdar\source\repos\MyBooknote\MyBooknote.Entities\obj\Debug\MyBooknote.Entities.dll
+C:\Users\Serdar\source\repos\MyBooknote\MyBooknote.Entities\obj\Debug\MyBooknote.Entities.pdb
+C:\Users\Serdar\source\repos\MyBooknote\MyBooknote.Entities\bin\Debug\MyBooknote.Entities.dll.config
+C:\Users\Serdar\source\repos\MyBooknote\MyBooknote.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Serdar\source\repos\MyBooknote\MyBooknote.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Serdar\source\repos\MyBooknote\MyBooknote.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Serdar\source\repos\MyBooknote\MyBooknote.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Serdar\source\repos\MyBooknote\MyBooknote.Entities\obj\Debug\MyBooknote.Entities.csproj.CopyComplete
+C:\Users\Serdar\source\repos\MyBooknote\MyBooknote.Entities\obj\Debug\MyBooknote.Entities.csprojAssemblyReference.cache

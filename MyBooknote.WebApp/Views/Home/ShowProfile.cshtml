@@ -1,0 +1,71 @@
+﻿@using MyBooknote.Entities
+@model BooknoteUser
+
+    @{
+        ViewBag.Title = "ShowProfile";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <link href="~/Content/UserPage.css" rel="stylesheet" />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="well well-sm">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <img src="https://picsum.photos/380/500?grayscale&random=1" alt="" class="img-rounded img-responsive" />
+                        </div>
+                        <div class="col-sm-6 col-md-8">
+                            <h4>
+                                @Model.Name  @Model.Surname
+                            </h4>
+                            <small>
+                                <cite title="San Francisco, USA">
+                                    İzmir,  TÜRKİYE <i class="glyphicon glyphicon-map-marker">
+                                    </i>
+                                </cite>
+                                <br />
+                                <br />
+                            </small>
+                            <p>
+                                <i class="glyphicon glyphicon-envelope"></i> @Model.Email
+                                <br />
+                                <i class="glyphicon glyphicon-user"></i>@Model.Username
+                                <br />
+                                <br />
+                                <br />
+                            </p>
+                            <!-- Split button -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">
+                                    Options
+                                </button>
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    @*<span class="caret"></span><span class="sr-only">Options</span>*@
+                                </button>
+                                <a href="/Home/Index" class="btn btn-secondary" style="margin-left:25px">Ana Sayfa</a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="@Url.Action("EditProfile")"><span class="fa fa-wrench"></span> Düzenle</a></li>
+                                    @*<li><a href="/Home/EditProfile/@Model.Id"><span class="fa fa-wrench"></span> Düzenle</a></li>*@
+                                    <li class="divider"></li>
+                                    <li><a href="@Url.Action("DeleteProfile")" onclick="return confirm('Kullanıcıyı silmek istediğinizden eminmisiniz?')"><span class="fa fa-eraser"></span> sil</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    $(function () {
+        $("footer").hide();
+        $("nav").hide();
+    });
+    </script>

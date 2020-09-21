@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "UserActivateOk";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link href="~/Content/Login.css" rel="stylesheet" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<body>
+    <div id="login">
+        <h3 class="text-center text-white pt-5">Login form</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <h1 class="text-center text-info">Yönlendiriliyorsunuz...</h1><br />
+                        <div class="form-group">
+                            <h2><span class="fa fa-bell">  Hesabınız Aktifleştirildi.</span></h2>
+                        </div><br />
+                        <div class="form-group">
+                            <h4>Hesabınız aktif, artık not paylaşabilir ve beğenme yapabilirsiniz..</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(function () {
+        $("footer").hide();
+        //$("nav").hide();
+
+        setTimeout(function () {
+            window.location = "/Home/Index";
+        },4000)
+    });
+</script>
+
+
+

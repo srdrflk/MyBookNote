@@ -1,0 +1,6 @@
+C:\Users\Serdar\source\repos\MyBooknote\BookNoteCore\bin\Debug\BookNoteCore.dll
+C:\Users\Serdar\source\repos\MyBooknote\BookNoteCore\bin\Debug\BookNoteCore.pdb
+C:\Users\Serdar\source\repos\MyBooknote\BookNoteCore\obj\Debug\BookNoteCore.csproj.CoreCompileInputs.cache
+C:\Users\Serdar\source\repos\MyBooknote\BookNoteCore\obj\Debug\BookNoteCore.dll
+C:\Users\Serdar\source\repos\MyBooknote\BookNoteCore\obj\Debug\BookNoteCore.pdb
+C:\Users\Serdar\source\repos\MyBooknote\BookNoteCore\obj\Debug\BookNoteCore.csprojAssemblyReference.cache

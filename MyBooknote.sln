@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBooknote.WebApp", "MyBooknote.WebApp\MyBooknote.WebApp.csproj", "{3F51C734-E9CA-45DE-95B4-A1107445DF89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBooknote.BusinessLayer", "MyBooknote.BusinessLayer\MyBooknote.BusinessLayer.csproj", "{391E9A5D-C367-4BBF-B4E9-5764D4563365}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBooknote.DataAccessLayer", "MyBooknote.DataAccessLayer\MyBooknote.DataAccessLayer.csproj", "{D90B4DEF-3468-4626-A56B-C4AD9967A987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBooknote.Entities", "MyBooknote.Entities\MyBooknote.Entities.csproj", "{0859B8E2-2471-4DD1-BFC3-34A200F68BE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookNoteCommon", "BookNoteCommon\BookNoteCommon.csproj", "{EF02E49F-9510-4131-A4A5-2C163CD0FC88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookNoteCore", "BookNoteCore\BookNoteCore.csproj", "{94579D21-46BF-45C3-9D36-2011F6D5C848}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F51C734-E9CA-45DE-95B4-A1107445DF89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F51C734-E9CA-45DE-95B4-A1107445DF89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F51C734-E9CA-45DE-95B4-A1107445DF89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F51C734-E9CA-45DE-95B4-A1107445DF89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{391E9A5D-C367-4BBF-B4E9-5764D4563365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{391E9A5D-C367-4BBF-B4E9-5764D4563365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{391E9A5D-C367-4BBF-B4E9-5764D4563365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{391E9A5D-C367-4BBF-B4E9-5764D4563365}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D90B4DEF-3468-4626-A56B-C4AD9967A987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D90B4DEF-3468-4626-A56B-C4AD9967A987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D90B4DEF-3468-4626-A56B-C4AD9967A987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D90B4DEF-3468-4626-A56B-C4AD9967A987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0859B8E2-2471-4DD1-BFC3-34A200F68BE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0859B8E2-2471-4DD1-BFC3-34A200F68BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0859B8E2-2471-4DD1-BFC3-34A200F68BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0859B8E2-2471-4DD1-BFC3-34A200F68BE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF02E49F-9510-4131-A4A5-2C163CD0FC88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF02E49F-9510-4131-A4A5-2C163CD0FC88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF02E49F-9510-4131-A4A5-2C163CD0FC88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF02E49F-9510-4131-A4A5-2C163CD0FC88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94579D21-46BF-45C3-9D36-2011F6D5C848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94579D21-46BF-45C3-9D36-2011F6D5C848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94579D21-46BF-45C3-9D36-2011F6D5C848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94579D21-46BF-45C3-9D36-2011F6D5C848}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4472D043-BB2C-4AA4-986C-D3558FBEE62A}
+	EndGlobalSection
+EndGlobal

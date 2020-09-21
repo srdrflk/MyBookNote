@@ -1,0 +1,63 @@
+﻿@using MyBooknote.Entities.ValueObjects
+@model RegisterViewModel
+
+@{
+    ViewBag.Title = "Kayıt Sayfası";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/Login.css" rel="stylesheet" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+@using (Html.BeginForm())
+{
+    <body>
+        <div id="login">
+            <h3 class="text-center text-white pt-5">Login form</h3>
+            <div class="container">
+                @Html.ValidationSummary(false)
+                <div id="login-row" class="row justify-content-center align-items-center">
+                    <div id="login-column" class="col-md-6">
+                        <div id="login-box" class="col-md-12">
+                            <h3 class="text-center text-info">Kayıt Formu</h3>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Kullanıcı adı:</label><br>
+                                @Html.TextBoxFor(model => model.Username, new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <label for="username" class="text-info">E-posta adresi :</label><br>
+                                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Şifre:</label><br>
+                                @Html.TextBoxFor(model => model.Password, new { @class = "form-control", type = "password" })
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Şifre tekrar:</label><br>
+                                @Html.TextBoxFor(model => model.RePassword, new { @class = "form-control", type = "password" })
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-info btn-md">Kayıt ol</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+}
+
+
+
+
+<script>
+    $(function () {
+        $("footer").hide();
+        //$("nav").hide();
+    });
+</script>
+
+
+
+
